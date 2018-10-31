@@ -5,7 +5,7 @@ public class ListApp {
 
 	public static void main(String[] args) {
 		testArrayList();
-		testLinkedList();
+		//testLinkedList();
 		
 		
 	
@@ -14,17 +14,16 @@ public class ListApp {
 		MyList list = new MyArrayList();
 		
 		
-		list.addAtBeginning("D");
-		list.addAtBeginning("B");
+		list.insertAt(0, "B");
 		list.addAtBeginning("A");
 		list.insertAt(2, "C");
-//		list.removeFromBeginning();
-//		list.removeFromEnd();
-//		
+		list.insertAt(3, "D");
+		list.removeAt(2);
+		
 		System.out.println(list);
-//		System.out.println(list.size());
-//		System.out.println(list.get(0));
-//		System.out.println(list.get(1));
+		System.out.println(list.size());
+		System.out.println(list.get(0));
+		System.out.println(list.get(1));
 	}
 	
 	private static void testLinkedList() {
@@ -33,14 +32,14 @@ public class ListApp {
 		list.addAtBeginning("B");
 		list.addAtBeginning("A");
 		list.addAtEnd("C");
-		list.addAtEnd("D");
-		list.removeFromBeginning();
-		list.removeFromEnd();
+		list.addAtEnd("F");
+		list.insertAt(3, "C");
+		list.removeAt(2);
 		
 		System.out.println(list);
 		System.out.println(list.size());
 		System.out.println(list.get(0));
-		System.out.println(list.get(1));
+		System.out.println(list.get(2));
 	}
 
 }

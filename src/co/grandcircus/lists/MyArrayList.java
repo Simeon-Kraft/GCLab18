@@ -12,7 +12,7 @@ public class MyArrayList implements MyList {
 	
 	@Override
 	public void removeAt(int index) {
-		for (int i = index; i < length; i++) {
+		for (int i = index; i < length - 1; i++) {
 			array[i] = array[i + 1];
 		}
 		length--;
@@ -22,6 +22,7 @@ public class MyArrayList implements MyList {
 		
 		if (length == 0) {
 			array[0] = data;
+			length++;
 			return;
 		}
 		if (isFull()) {
